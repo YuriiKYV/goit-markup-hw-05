@@ -107,6 +107,7 @@ img {
   color: var(--primary-text-color);
 }
 .menu-list-link {
+  display: block;
   position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -145,24 +146,29 @@ img {
 }
 
 .contact-title-icon {
-  fill: var(--secondary-text-color);
+  fill: currentColor;
   margin-right: 10px;
 }
-.contact-title-link:hover .contact-title-icon,
+/* .contact-title-link:hover .contact-title-icon,
 .contact-title-link:focus .contact-title-icon {
-  fill: var(--primary-accent-color);
-}
+  color: currentColor;
+} */
 
 /* =====END HEADER=====*/
 
 /* =====START HERO=====*/
 .hero {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
     url(../images/background-hero-Img.jpg);
   background-size: cover;
+  background-position: center;
   background-color: #c4c4c4;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -270,6 +276,7 @@ img {
   position: relative;
 }
 .specificity-description {
+  display: flex;
   position: absolute;
   bottom: 0;
   color: var(--secondary-accent-color);
@@ -280,9 +287,9 @@ img {
   text-transform: uppercase;
   background: rgba(47, 48, 58, 0.8);
   width: 100%;
-  text-align: center;
-  padding-top: 27px;
-  padding-bottom: 27px;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
 
 }
 /* =====END ABOUT=====*/
@@ -494,7 +501,7 @@ img {
 }
 
 .filter-item:not(:last-child) {
-  margin-right: 30px;
+  margin-right: 8px;
 }
 
 .filter-list-button {
@@ -522,6 +529,14 @@ img {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
+.filter-list-button.first {
+    background: var(--primary-accent-color);
+    color: var(--secondary-accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
@@ -561,7 +576,7 @@ img {
   text-align: center;
   padding: 63px 24px;
   overflow: auto;
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
 /* .portfolio-item:hover {
